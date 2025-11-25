@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HuntersGo | Mission & Story</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <!-- ░░░ HEADER ░░░ -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/emblem.png" alt="HuntersGo emblem">
+        <span>HuntersGo</span>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="past_trips.html">Past Trips</a>
+        <a href="current_mission.html">Current Mission</a>
+        <a href="support.html">Support</a>
+        <a href="devo.html">Blog</a>
+      </nav>
+      <button id="theme-toggle">🌓</button>
+    </div>
+  </header>
+
+  <!-- ░░░ HERO SECTION ░░░ -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Following God's Call</h1>
+      <p>Serving communities around the world with compassion, purpose, and the Gospel.</p>
+      <a href="current_mission.html" class="cta">See Our Current Mission</a>
+    </div>
+  </section>
+
+  <!-- ░░░ INTRO SECTION ░░░ -->
+  <section class="intro-section container">
+    <h2>Welcome to Our Journey</h2>
+    <p>
+      We're Noah and Hanna Hunter — a missionary family called to serve wherever God leads.  
+      From Africa to Asia to the United States, we partner with ministries who are bringing hope, 
+      restoration, and the Gospel to communities in need.
+    </p>
+    <p>
+      Here you can follow our mission updates, partner with us through prayer and giving, 
+      and read stories from the field.
+    </p>
+  </section>
+
+  <!-- ░░░ STORIES SECTION ░░░ -->
+  <section class="grid-section container">
+    <h2>Stories From the Field</h2>
+
+    <div class="grid">
+      <a href="blog_detail.html?id=kenya2025" class="tile" style="background-image:url('assets/kenya.png')">
+        <div class="tile-overlay">
+          <h3>Nairobi, Kenya</h3>
+          <p>Reaching 7,000 students with the Gospel</p>
+        </div>
+      </a>
+
+      <a href="blog_detail.html?id=philippines2024" class="tile" style="background-image:url('assets/philippines.png')">
+        <div class="tile-overlay">
+          <h3>The Philippines</h3>
+          <p>Serving rescued youth at HHCR</p>
+        </div>
+      </a>
+
+      <a href="blog_detail.html?id=estonia2025" class="tile" style="background-image:url('assets/estonia.png')">
+        <div class="tile-overlay">
+          <h3>Estonia</h3>
+          <p>Evangelism through Colab Coffee</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ░░░ PARTNER SECTION ░░░ -->
+  <section class="partner-call">
+    <h2>Partner With Us</h2>
+    <p>Join us in prayer and support as we continue to follow God’s call into missions.</p>
+    <a href="support.html" class="cta">Support the Mission</a>
+  </section>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer>
+    <p>© 2025 HuntersGo — Sent to Serve, Called to Love.</p>
+  </footer>
+
+  <!-- ░░░ THEME TOGGLE SCRIPT ░░░ -->
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+
+</body>
+</html>
